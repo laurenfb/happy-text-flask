@@ -1,11 +1,15 @@
-from app import app
+from flask import Flask
+
+application = Flask(__name__)
+
 from flask import render_template
 
-@app.route('/')
-@app.route('/index')
+
+@application.route('/')
+@application.route('/index')
 def index():
     return render_template('index.html',)
 
-@app.route('/success')
+@application.route('/success')
 def success():
     return render_template('success.html',)

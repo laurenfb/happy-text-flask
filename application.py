@@ -1,7 +1,5 @@
 #!flask/bin/python
-from flask import Flask
+from app.app import application
 
-application = app = Flask(__name__)
-from app import views
-
-application.run(debug=True)
+if __name__ == "__main__":
+    application.run(debug=True)
